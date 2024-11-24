@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction Module</title>
+    <link rel="stylesheet" href="auction.css"> <!-- This links to the CSS file -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo-section">
+            <img src="images/India_Post_Logo_With_Text.png" alt="India Post Logo" class="logo">
+            <div class="logos-right">
+                <img src="images/G20.png" alt="G20 Logo" class="small-logo">
+                <img src="images/75.png" alt="Azadi Logo" class="small-logo">
+                <img src="images/Emblem_of_India.png" alt="India Emblem" class="small-logo">
+            </div>
+        </div>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="auction.html" class="active">Auction</a>
+            <a href="admin_dashboard.html">Dashboard</a>
+        </nav>
+    </header>
+
+    <!-- Welcome Message -->
+    <section class="welcome-section">
+        <h1>Welcome to the Auction Page</h1>
+        <p>Bid on exclusive stamps and collectibles uploaded by the admin. Scroll down to browse items!</p>
+    </section>
+
+    <!-- Auction Items -->
+    <section class="auction-items">
+        <!-- Example Item 1 -->
+        <div class="auction-card">
+            <img src="images/prod1.jpeg" alt="Stamp 1">
+            <h3>Vintage Stamp Collection</h3>
+            <p>Starting Bid: ₹500</p>
+            <button class="bid-button">Bid Now</button>
+        </div>
+
+        <!-- Example Item 2 -->
+        <div class="auction-card">
+            <img src="images/prod2.jpeg" alt="Stamp 2">
+            <h3>Antique Postal History</h3>
+            <p>Starting Bid: ₹800</p>
+            <button class="bid-button">Bid Now</button>
+        </div>
+
+        <!-- Example Item 3 -->
+        <div class="auction-card">
+            <img src="images/prod3.jpeg" alt="Stamp 3">
+            <h3>Commemorative Stamp Set</h3>
+            <p>Starting Bid: ₹1000</p>
+            <button class="bid-button">Bid Now</button>
+        </div>
+        <?php include 'includes/fetch_auction_items.php'; ?>
+    </section>
+   
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>© 2024 India Post Auctions. All rights reserved.</p>
+    </footer>
+</body>
+</html>

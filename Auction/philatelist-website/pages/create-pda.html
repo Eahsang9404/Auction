@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Philatelic Deposit Account (PDA) - Indian Post</title>
+    <link rel="stylesheet" href="../styles/create-pda.css" />
+    <style>
+      .terms-dropdown {
+        display: none;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        background-color: #f9f9f9;
+      }
+      .terms-toggle {
+        cursor: pointer;
+        color: blue;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img
+          src="India_Post_Logo_With_Text.png"
+          alt="Indian Post Logo"
+          class="logo"
+        />
+        <h1>Create Philatelic Deposit Account (PDA)</h1>
+      </header>
+      <main>
+        <form
+          id="pdaForm"
+          action="/submit-form"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <!-- Account Type Selection -->
+          <fieldset class="fieldset-horizontal">
+            <legend>Account Type:</legend>
+            <div class="form-group">
+              <input
+                type="radio"
+                id="privateIndividual"
+                name="accountType"
+                value="privateIndividual"
+              />
+              <label for="privateIndividual">Private Individual</label>
+            </div>
+            <div class="form-group">
+              <input
+                type="radio"
+                id="stampDealer"
+                name="accountType"
+                value="stampDealer"
+              />
+              <label for="stampDealer">Stamp Dealer/Shop</label>
+            </div>
+            <div class="form-group">
+              <input
+                type="radio"
+                id="company"
+                name="accountType"
+                value="company"
+              />
+              <label for="company">Company</label>
+            </div>
+          </fieldset>
+
+          <!-- Personal Details -->
+          <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Shyam Tiwari"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@example.com"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="1112801280"
+              required
+            />
+          </div>
+
+          <!-- Address Details -->
+          <div class="form-group">
+            <label for="address">Street Address:</label>
+            <textarea
+              id="address"
+              name="address"
+              rows="2"
+              placeholder="123 square"
+              required
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="city">City:</label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              placeholder="City Name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="pincode">Pincode:</label>
+            <input
+              type="text"
+              id="pincode"
+              name="pincode"
+              placeholder="442001"
+              required
+            />
+          </div>
+
+          <!-- Date of Birth -->
+          <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required />
+          </div>
+
+          <!-- Initial Deposit Amount -->
+          <div class="form-group">
+            <label for="deposit">Initial Deposit Amount (INR):</label>
+            <input
+              type="number"
+              id="deposit"
+              name="deposit"
+              required
+              min="200"
+              placeholder="200"
+            />
+          </div>
+
+          <!-- Preferred Settlement -->
+          <fieldset class="fieldset-horizontal">
+            <legend>Preferred Settlement:</legend>
+            <div class="form-group">
+              <input
+                type="radio"
+                id="onceAYear"
+                name="settlement"
+                value="onceAYear"
+              />
+              <label for="onceAYear">Once a Year</label>
+            </div>
+            <div class="form-group">
+              <input
+                type="radio"
+                id="twiceAYear"
+                name="settlement"
+                value="twiceAYear"
+              />
+              <label for="twiceAYear">Twice a Year</label>
+            </div>
+            <div class="form-group">
+              <input
+                type="radio"
+                id="fourTimesAYear"
+                name="settlement"
+                value="fourTimesAYear"
+              />
+              <label for="fourTimesAYear">Four Times a Year</label>
+            </div>
+            <div class="form-group">
+              <input
+                type="radio"
+                id="sixTimesAYear"
+                name="settlement"
+                value="sixTimesAYear"
+              />
+              <label for="sixTimesAYear">Six Times a Year</label>
+            </div>
+          </fieldset>
+
+          <!-- Aadhar Card Details -->
+          <div class="form-group">
+            <label for="aadharNumber">Aadhar Card Number:</label>
+            <input
+              type="text"
+              id="aadharNumber"
+              name="aadharNumber"
+              placeholder="Enter Aadhar Number"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="uploadAadhar">Upload Aadhar Card:</label>
+            <input
+              type="file"
+              id="uploadAadhar"
+              name="uploadAadhar"
+              accept=".jpg,.jpeg,.png,.pdf"
+              required
+            />
+          </div>
+
+          <!-- Upload Signature Option -->
+          <div class="form-group">
+            <label for="uploadSignature">Upload Signature:</label>
+            <input
+              type="file"
+              id="uploadSignature"
+              name="uploadSignature"
+              accept=".jpg,.jpeg,.png"
+              required
+            />
+          </div>
+
+          <!-- Password Fields -->
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              placeholder="Confirm your password"
+              required
+            />
+          </div>
+
+          <!-- Terms and Conditions -->
+          <div class="form-group">
+            <input
+              type="checkbox"
+              id="termsAndConditions"
+              name="termsAndConditions"
+              required
+            />
+            <label for="termsAndConditions">
+              I agree to the
+              <span class="terms-toggle" onclick="toggleTerms()"
+                >Terms and Conditions</span
+              >.
+            </label>
+          </div>
+          <div class="terms-dropdown" id="termsDropdown">
+            <p>
+              Conditions of Service: The account may be opened with a minimum
+              deposit of Rs. 200/- in cash or by remittance by money order or by
+              cheque/draft encashable in India. With the remittances, the
+              customers should also indicate clearly the types and quantities of
+              philatelic items they desire to purchase with each issue of new
+              stamps. The items indicated in the application form will be
+              dispatched to the customer automatically without any further order
+              on the part of the customer.
+            </p>
+            <p>
+              Mode of dispatch and charges for dispatch of philatelic items: The
+              items will be dispatched free “on postal service” by registered
+              post unless the customer specifically desires that the items
+              should be sent to him by insured post. The Philatelic Deposit
+              Account holder may also collect these items after every issue by
+              calling at the counter of the philatelic bureau.
+            </p>
+            <p>Last Updated: 14 Feb 2022</p>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="form-group">
+            <button type="submit">Create Account</button>
+          </div>
+        </form>
+      </main>
+    </div>
+    <script>
+      function toggleTerms() {
+        const dropdown = document.getElementById("termsDropdown");
+        dropdown.style.display =
+          dropdown.style.display === "none" || dropdown.style.display === ""
+            ? "block"
+            : "none";
+      }
+    </script>
+  </body>
+</html>

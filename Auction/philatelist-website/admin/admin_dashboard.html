@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin_dashboard.css"> <!-- Link to your CSS -->
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-section">
+            <h1>Admin Dashboard</h1>
+        </div>
+        <nav class="navigation">
+            <a href="auction_home.html" class="active">Home</a>
+            <a href="auction.html">Auction Page</a>
+            <a href="logout.php">Logout</a>
+        </nav>
+    
+        
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="dashboard">
+            <h2>Manage Auction Items</h2>
+
+            <!-- Add New Auction Item -->
+            <button id="addAuctionButton">Add New Auction Item</button>
+
+            <!-- Auction Items Table -->
+            <table class="auction-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Starting Bid</th>
+                        <th>End Time</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="auctionItemsTable">
+                    <!-- Data will be dynamically populated using PHP -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Add/Edit Form Modal -->
+        <div id="formModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3 id="formTitle">Add New Auction Item</h3>
+                <form id="auctionForm" method="POST" action="admin_functions.php" enctype="multipart/form-data">
+                    <input type="hidden" name="id" id="itemId">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" required>
+
+                    <label for="description">Description:</label>
+                    <textarea name="description" id="description" required></textarea>
+
+                    <label for="starting_bid">Starting Bid:</label>
+                    <input type="number" name="starting_bid" id="starting_bid" required>
+
+                    <label for="end_time">End Time:</label>
+                    <input type="datetime-local" name="end_time" id="end_time" required>
+
+                    <label for="image">Image:</label>
+                    <input type="file" name="image" id="image" accept="image/*">
+
+                    <button type="submit" name="action" value="save">Save</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Admin Dashboard. All rights reserved.</p>
+    </footer>
+
+    <script src="admin_dashboard.js"></script> <!-- Link to JavaScript -->
+</body>
+</html>

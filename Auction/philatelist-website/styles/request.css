@@ -1,0 +1,162 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Logo Header */
+.logo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container-post {
+    display: flex;
+    align-items: center;
+}
+
+.india-post-logo {
+    max-width: 120px;
+    height: auto;
+}
+
+/* Navigation */
+nav {
+    background-color: #d22133;
+    padding: 5px 15px; /* Reduce padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 12px; /* Reduce padding */
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-right: 10px; /* Add space between links */
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #bb1d29;
+}
+
+/* Profile Icon */
+.profile-dropdown {
+    position: relative; /* Add positioning */
+}
+
+.profile-icon {
+    width: 55px; /* Slightly smaller */
+    height: auto; /* Slightly smaller */
+    border-radius: 50%;
+    transition: transform 0.3s;
+    margin-left: 10px; /* Space between profile icon and links */
+}
+
+.profile-icon:hover {
+    transform: scale(1.8);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: rgb(196, 97, 97);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.profile-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Main Content */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #d22133;
+}
+
+/* Request Form */
+.request-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.request-form label {
+    margin-bottom: 5px;
+}
+
+.request-form input,
+.request-form select,
+.request-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.request-form button {
+    background-color: #d22133;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.request-form button:hover {
+    background-color: #b71c1c;
+}
+
+/* Confirmation Message */
+.confirmation-message {
+    margin-top: 20px;
+    color: #28a745;
+}
+
+/* Footer */
+footer {
+    background-color: #d22133;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}

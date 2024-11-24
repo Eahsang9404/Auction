@@ -1,0 +1,84 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F5F5F5; /* Light grey background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Admin Login Container Styles */
+.admin-login-container {
+    width: 30%;
+    margin: 100px auto;
+    background-color: #FFFFFF;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    border: 2px solid #D32F2F; /* Red border */
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #D32F2F; /* Red color */
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #B71C1C; /* Darker red color */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #D32F2F; /* Red border */
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #D32F2F; /* Red background */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button[type="submit"]:hover {
+    background-color: #C62828; /* Darker red on hover */
+}
+
+/* Back to Login Link Styles */
+.back-to-login {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.back-to-login a {
+    color: #D32F2F;
+    text-decoration: none;
+}
+
+.back-to-login a:hover {
+    text-decoration: underline;
+}

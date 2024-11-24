@@ -1,0 +1,50 @@
+/* Slider Styles */
+.slider {
+    position: relative;
+    max-width: 100%; /* Ensure it fits the container */
+    margin: 20px auto; /* Center the slider with margins */
+    overflow: hidden; /* Hide overflow to maintain the box */
+    border-radius: 8px; /* Optional: Round corners */
+}
+
+.slides {
+    display: flex; /* Use flexbox for the slides */
+    transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.slide {
+    min-width: 100%; /* Each slide takes full width */
+    box-sizing: border-box; /* Ensures padding/margins are included */
+}
+
+.slide img {
+    width: 100%; /* Make images responsive */
+    border-radius: 8px; /* Optional styling */
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: rgb(17, 17, 17);
+    font-weight: bold;
+    font-size: 18px;
+    transition: background 0.3s ease;
+    border: none;
+    border-radius: 5px;
+    user-select: none; /* Prevent text selection */
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}

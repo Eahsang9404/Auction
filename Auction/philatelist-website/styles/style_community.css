@@ -1,0 +1,143 @@
+/* Existing styles */
+
+/* Additional styles for the Community page */
+
+.community-container {
+    width: 70%;
+    margin: 50px auto;
+    background-color: #FFFFFF; /* White background for the container */
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    border: 2px solid #D32F2F; /* Red border */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 130px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #D32F2F; /* Red color */
+    font-size: 2em;
+    margin: 0;
+}
+
+/* Form styles */
+.post-form {
+    margin-bottom: 30px;
+}
+
+.post-form h2 {
+    color: #B71C1C; /* Darker red color */
+    font-size: 1.5em;
+    border-bottom: 2px solid #D32F2F;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.post-form .form-group {
+    margin-bottom: 15px;
+}
+
+.post-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #B71C1C; /* Darker red color */
+}
+
+.post-form input[type="text"],
+.post-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #D32F2F; /* Red border */
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.post-form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #D32F2F; /* Red background */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.post-form button[type="submit"]:hover {
+    background-color: #C62828; /* Darker red on hover */
+}
+
+/* Posts list styles */
+.posts-list {
+    margin-top: 20px;
+}
+
+.posts-list h2 {
+    color: #B71C1C; /* Darker red color */
+    font-size: 1.5em;
+    border-bottom: 2px solid #D32F2F;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.post-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #D32F2F;
+    border-radius: 8px;
+    background-color: #F9F9F9; /* Light grey background for posts */
+}
+
+.post-item h3 {
+    color: #D32F2F; /* Red color */
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.post-item p {
+    color: #333;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.post-item strong {
+    color: #D32F2F; /* Red color for usernames */
+}
+
+.post-item em {
+    color: #B71C1C; /* Darker red color for date */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .community-container {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    .logo {
+        width: 100px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .post-form h2,
+    .posts-list h2 {
+        font-size: 1.2em;
+    }
+    
+    .post-item h3 {
+        font-size: 1.1em;
+    }
+}

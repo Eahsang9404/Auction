@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - Philatelist Hub</title>
+    <link rel="stylesheet" href="../styles/signup.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="signup-container">
+      <div class="form-container">
+        <h2>Sign Up</h2>
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="mobile">Mobile Number</label>
+            <input type="tel" id="mobile" name="mobile" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              required
+            />
+          </div>
+          <button type="submit" class="signup-btn">
+            Create Normal Account
+          </button>
+        </form>
+        <hr />
+        <button onclick="redirectToPDA()" class="pda-btn">
+          Create Philatelic Deposit Account (PDA)
+        </button>
+        <p class="login-text">
+          Already have an account? <a href="login.html">Log in here</a>.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function redirectToPDA() {
+        window.location.href = "create-pda.html"; // Redirects to PDA signup page
+      }
+    </script>
+  </body>
+</html>

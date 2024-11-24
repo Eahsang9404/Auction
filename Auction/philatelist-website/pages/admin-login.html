@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login - Indian Post Philatelist</title>
+    <link rel="stylesheet" href="../styles/styles_admin_login.css" />
+  </head>
+  <body>
+    <div class="admin-login-container">
+      <header>
+        <img
+          src="India_Post_Logo_With_Text.png"
+          alt="Indian Post Logo"
+          class="logo"
+        />
+        <h1>Admin Login</h1>
+      </header>
+      <form id="adminLoginForm" action="admin-dashboard.html" method="post">
+        <div class="form-group">
+          <label for="admin-username">Username:</label>
+          <input
+            type="text"
+            id="admin-username"
+            name="admin-username"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="admin-password">Password:</label>
+          <input
+            type="password"
+            id="admin-password"
+            name="admin-password"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <button type="submit">Login</button>
+        </div>
+      </form>
+      <p class="back-to-login">
+        <a href="login.html">Back to Login</a>
+      </p>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,173 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Light background color */
+}
+
+header {
+    background-color: #b22222; /* Header background color */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    background-color: #ffeb3b; /* Hero section background */
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero h1 {
+    margin: 0;
+}
+
+.hero p {
+    margin: 1rem 0;
+}
+
+.cta-button {
+    background-color: #b22222; /* Call-to-action button color */
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #a11a1a; /* Darker shade on hover */
+}
+
+.auction-info {
+    padding: 2rem;
+    background-color: white; /* Auction section background */
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.auction-info h2 {
+    margin-top: 0;
+}
+
+.auction-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for grid layout */
+    gap: 20px; /* Space between grid items */
+}
+
+.auction-item {
+    border: 1px solid #ccc; /* Border for auction items */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensure content does not overflow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transition: transform 0.3s; /* Animation for hover effect */
+}
+
+.auction-item:hover {
+    transform: scale(1.02); /* Slightly enlarge item on hover */
+}
+
+.auction-image {
+    width: 100%; /* Responsive image */
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+}
+
+.auction-details {
+    padding: 1rem;
+}
+
+.auction-details h3 {
+    font-size: 1.2rem;
+    color: #b22222; /* Title color */
+    margin-bottom: 0.5rem;
+}
+
+.auction-details p {
+    margin: 0.5rem 0; /* Spacing between paragraphs */
+}
+
+.bid-button {
+    background-color: #b22222; /* Bid button color */
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.bid-button:hover {
+    background-color: #a11a1a; /* Darker shade on hover */
+}
+
+.how-to-participate {
+    padding: 2rem;
+    background-color: white; /* Background for how-to section */
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.how-to-participate h2 {
+    margin-top: 0;
+}
+
+.steps-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Evenly distribute steps */
+}
+
+.step {
+    border: 1px solid #ccc; /* Border for each step */
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #f9f9f9; /* Background for steps */
+    flex: 1; /* Allows flex items to grow */
+    margin: 0 0.5rem; /* Margin for spacing */
+}
+
+.step h3 {
+    margin-top: 0; /* Remove margin on top */
+}
+
+.receive-message {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #b22222; /* Footer background color */
+    color: #fff;
+}
+
+.footer-links a {
+    color: #fff; /* Footer link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

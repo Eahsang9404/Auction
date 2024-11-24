@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community - Indian Post Philatelist</title>
+    <link rel="stylesheet" href="../styles/style_community.css" />
+  </head>
+  <body>
+    <div class="community-container">
+      <header>
+        <img
+          src="India_Post_Logo_With_Text.png"
+          alt="Indian Post Logo"
+          class="logo"
+        />
+        <h1>Community</h1>
+      </header>
+      <section class="community-posts">
+        <div class="post-form">
+          <h2>Share Your Post</h2>
+          <form id="postForm">
+            <div class="form-group">
+              <label for="title">Title:</label>
+              <input type="text" id="title" name="title" required />
+            </div>
+            <div class="form-group">
+              <label for="content">Content:</label>
+              <textarea
+                id="content"
+                name="content"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <button type="submit">Post</button>
+            </div>
+          </form>
+        </div>
+        <div class="posts-list">
+          <h2>Recent Posts</h2>
+          <div class="post-item">
+            <h3>Post Title 1</h3>
+            <p>Posted by <strong>User1</strong> on <em>August 31, 2024</em></p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              lacinia odio vitae vestibulum.
+            </p>
+          </div>
+          <div class="post-item">
+            <h3>Post Title 2</h3>
+            <p>Posted by <strong>User2</strong> on <em>August 30, 2024</em></p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              lacinia odio vitae vestibulum.
+            </p>
+          </div>
+          <!-- Add more posts as needed -->
+        </div>
+      </section>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>

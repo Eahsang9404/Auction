@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="auction.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo-section">
+            <img src="images/India_Post_Logo_With_Text.png" alt="India Post Logo" class="logo">
+        </div>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="auction_home.html">Auction</a>
+        </nav>
+    </header>
+
+    <!-- Login Form Section -->
+    <section class="welcome-section">
+        <h1>Admin Login</h1>
+        <p>Please enter your credentials to access the dashboard.</p>
+
+        <?php 
+        // Include PHP logic to display error messages dynamically
+        if (!empty($error)) {
+            echo '<div class="error-message" style="color: red;">' . htmlspecialchars($error) . '</div>';
+        } 
+        ?>
+
+        <form method="POST" action="admin_login.php" class="login-form">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <button type="submit" class="bid-button">Login</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>© 2024 India Post Auctions. All rights reserved.</p>
+    </footer>
+</body>
+</html>
